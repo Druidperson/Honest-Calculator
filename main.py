@@ -22,15 +22,6 @@ def store_to_memory(number):
 		pass
 
 
-def keep_going():
-	print("Do you want to continue calculations? (y / n):")
-	decision = input()
-	if decision == "y":
-		return True
-	else:
-		return False
-
-
 def calculator():
 	while True:
 		x, oper, y = take_input()
@@ -85,7 +76,9 @@ def main():
 	while True:
 		result = calculator()
 		store_to_memory(result)
-		if keep_going():
+		print("Do you want to continue calculations? (y / n):")
+		decision = input()
+		if decision == "y":
 			continue
 		else:
 			break
